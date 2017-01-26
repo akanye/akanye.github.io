@@ -1,0 +1,69 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+Let's play tic tac toe!
+<br/>
+<div>
+  <span>O</span>
+  <span>|</span>
+  <span>X</span>
+  <span>|</span>
+  <span>O</span>
+</div>
+<div>------</div>
+<div>
+  <span>X</span>
+  <span>|</span>
+  <span>O</span>
+  <span>|</span>
+  <span>X</span>
+</div>
+<div>------</div>
+<div>
+  <span>O</span>
+  <span>|</span>
+  <span>O</span>
+  <span>|</span>
+  <span>X</span>
+</div>
+<br>
+<div>&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&</div>
+<br>
+<table>
+  <tr>
+    <td id="box1" onclick="placeLetter(this)">P</td>
+    <td id="box2" onclick="placeLetter(this)">P</td>
+    <td id="box3" onclick="placeLetter(this)">P</td>
+  </tr>
+  <tr>
+    <td id="box4" onclick="placeLetter(this)">Q</td>
+    <td id="box5" onclick="placeLetter(this)">Q</td>
+    <td id="box6" onclick="placeLetter(this)">Q</td>
+  </tr>
+  <tr>
+    <td id="box7" onclick="placeLetter(this)">R</td>
+    <td id="box8" onclick="placeLetter(this)">R</td>
+    <td id="box9" onclick="placeLetter(this)">R</td>
+  </tr>
+</table>
+<script>
+  var player1 = true;
+
+  function placeLetter(box) {
+      if(player1 === true){
+        var mark = " X ";
+      }else{
+        var mark = " O "
+      }
+      box.innerHTML= mark;
+
+      if(player1 === true) {
+        player1 = false;
+      }else{
+        player1 = true;
+      }
+
+    }
+</script>
